@@ -1,4 +1,6 @@
-#include <Python.h>
+#include <python.h>
+#include <object.h>
+#include <listobject.h>
 
 void print_python_list_info(PyObject *p)
 {
@@ -13,6 +15,7 @@ void print_python_list_info(PyObject *p)
 	{
 		element = PyList_GET_ITEM(p, idx);
 		printf("Element %ld: %s\n", idx, element->obj_type->tp_name);
+	idx++;
 	}
 }
 
